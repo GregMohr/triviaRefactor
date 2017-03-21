@@ -1,0 +1,32 @@
+<div ng-controller='sessionController'>
+  <a href="#/dashboard">Home</a>
+  <a href="#/new">Add question</a>
+  <a href="#" ng-click='logout()'>Logout</a>
+  <div ng-controller='gameController'>
+    <br>
+    <br>
+    <div ng-style='{"border":"1px solid black", "width":"300px","text-align":"center"}'>
+      <a href="#/play"><button>Play</button></a>
+      <p>Click button to start Trivia</p>
+    </div>
+    <br>
+    <br>
+    Search: <input type="text" name="search" value="" placeholder='search' ng-model='search'>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='game in games | filter: search | orderBy: "-score"'>
+          <td>{{game.player}}</td>
+          <td>{{game.score}}</td>
+          <td>{{(game.score/3 * 100).toFixed(2)}}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

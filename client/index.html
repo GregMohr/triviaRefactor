@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Trivia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="moment/moment.js"></script>
+    <script src="angular-moment/angular-moment.js"></script>
+    <script src='app.js'></script>
+    <script src='controllers/session.js'></script>
+    <script src='factories/session.js'></script>
+    <script src='controllers/trivia.js'></script>
+    <script src='factories/trivia.js'></script>
+    <script src='controllers/game.js'></script>
+    <script src='factories/game.js'></script>
+  </head>
+  <body ng-style='{"font-family":"monospace"}'>
+    <ng-view></ng-view>
+  </body>
+</html>

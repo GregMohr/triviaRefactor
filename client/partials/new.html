@@ -1,0 +1,24 @@
+<div ng-controller='sessionController'>
+  <a href="#/dashboard">Home</a>
+  <a href="#/new">Add question</a>
+  <a href="#" ng-click='logout()'>Logout</a>
+  <br>
+  <h2>New Question</h2>
+  <div ng-controller='triviaController' ng-style='{"width":"250px"}'>
+    {{errMsg}}
+    <br>
+    <br>
+    Question:<br>
+    <textarea name="name" rows="4" cols="20" ng-model='newQuestion.question'></textarea>
+    <br>
+    Correct Answer: <input type="text" name="" value="" ng-model='newQuestion.answer'>
+    <br>
+    Fake Answer 1: <input type="text" name="" value="" ng-model='newQuestion.fakeOne'>
+    <br>
+    Fake Answer 2: <input type="text" name="" value="" ng-model='newQuestion.fakeTwo'>
+    <br>
+    <br>
+    <a href="#/dashboard"><button>Cancel</button></a>
+    <button ng-click='create()'>Submit</button>
+  </div>
+</div>

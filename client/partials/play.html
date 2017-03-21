@@ -1,0 +1,18 @@
+<div ng-controller='sessionController'>
+  <a href="#/dashboard">Home</a>
+  <a href="#/new">Add question</a>
+  <a href="#" ng-click='logout()'>Logout</a>
+  <br>
+  <br>
+  <h2>Hi {{sessionUser.name}}!</h2>
+  <p>Choose an answer for each question, then click Submit.</p>
+  <div ng-controller='gameController'>
+    <div ng-style='{"border":"1px solid black", "width":"300px","text-align":"left"}' ng-repeat='question in gameQuestions track by $index'>
+      <p>{{question.question}}</p>
+      <label ng-repeat='answer in question.answers' ng-style='{"display":"block"}'><input type="radio" name="{{question._id}}" ng-model='selects[question._id]' ng-value='answer.id'>{{answer.answer}}</label>
+    </div>
+    <a href="#/dashboard"><button>Cancel</button></a>
+    <button ng-click='score()'>Submit</button>
+    <p ng-style='{"color":"red"}'>{{errMsg}}</p>
+  </div>
+</div>
