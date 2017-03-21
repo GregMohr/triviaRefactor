@@ -1,3 +1,0 @@
-It seems my controllers tend not to meet the skinny controllers/fat models concept, but I feel the logic makes most sense taking place in the controllers as it has access to all of the data. Is there some pre-processing/main processing division I'm not employing?
-
-should the 1 trivia factory method be moved to game factory? and the 1 be trivia controller method be moved to be game controller?
